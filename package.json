@@ -105,10 +105,10 @@
     "typescript": "3.7.4",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
-    "wire-web-config-internal": "https://github.com/wireapp/wire-web-config-default#v0.24.34",
-    "wire-web-config-production": "https://github.com/wireapp/wire-web-config-wire#v0.24.35-0"
+    "wire-web-config-internal": "https://github.com/david123sw/wire-web-config-default",
+    "wire-web-config-production": "https://github.com/david123sw/wire-web-config-wire"
   },
-  "homepage": "https://wire.com",
+  "homepage": "https://isecret.im",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -132,7 +132,7 @@
   "productName": "WireInternal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wireapp/wire-desktop.git"
+    "url": "https://github.com/david123sw/wire-desktop.git"
   },
   "scripts": {
     "build:linux": "yarn build:prepare && ts-node -P tsconfig.bin.json ./bin/build-tools/build-cli.ts linux",
