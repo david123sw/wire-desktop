@@ -1,6 +1,6 @@
 {
   "adminUrl": "https://isecret.im",
-  "appBase": "https://account.isecret.im",
+  "appBase": "https://webapp-new2.isecret.im",
   "buildDir": "wrap/build",
   "buildNumber": "0",
   "copyright": "© Secret",
