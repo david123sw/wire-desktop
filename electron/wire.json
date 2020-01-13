@@ -8,7 +8,7 @@
   "description": "Secret makes connections more valuable.",
   "distDir": "wrap/dist",
   "electronDirectory": "electron",
-  "environment": "internal",
+  "environment": "production",
   "enableAsar": true,
   "legalUrl": "https://isecret.im",
   "licensesUrl": "https://isecret.im",
