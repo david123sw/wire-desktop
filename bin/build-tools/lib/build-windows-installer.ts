@@ -43,9 +43,9 @@ export async function buildWindowsInstallerConfig(
   const {commonConfig} = await getCommonConfig(envFileResolved, wireJsonResolved);
 
   const windowsDefaultConfig: WindowsConfig = {
-    installerIconUrl: 'https://wire-app.wire.com/win/internal/wire.internal.ico',
+    installerIconUrl: `${commonConfig.electronDirectory}/img/logo.ico`,
     loadingGif: `${commonConfig.electronDirectory}/img/logo.256.png`,
-    updateUrl: 'https://wire-app.wire.com/win/internal/',
+    updateUrl: 'https://isecret.im/win/',
   };
 
   const windowsConfig: WindowsConfig = {
