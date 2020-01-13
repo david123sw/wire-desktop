@@ -55,7 +55,7 @@ export async function buildWindowsInstallerConfig(
   };
 
   const wInstallerOptions: electronWinstallerOptions = {
-    appDirectory: `${commonConfig.buildDir}/${commonConfig.name}-win32-ia32`,
+    appDirectory: `${commonConfig.buildDir}/${commonConfig.name}-win32-x64`,
     authors: commonConfig.name,
     copyright: commonConfig.copyright,
     description: commonConfig.description,
