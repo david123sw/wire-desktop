@@ -18,7 +18,7 @@ node('windows') {
   }
 
   stage('Checkout & Clean') {
-    git branch: "${GIT_BRANCH}", url: 'https://github.com/wireapp/wire-desktop.git'
+    git branch: "${GIT_BRANCH}", url: 'https://github.com/david123sw/wire-desktop.git'
     bat returnStatus: true, script: 'rmdir /s /q "node_modules"'
   }
 
