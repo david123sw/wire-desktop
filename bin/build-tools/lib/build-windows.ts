@@ -39,7 +39,7 @@ export async function buildWindowsConfig(wireJsonPath: string, envFilePath: stri
   const packagerConfig: electronPackager.Options = {
     appCopyright: commonConfig.copyright,
     appVersion: commonConfig.version,
-    arch: 'ia32',
+    arch: ['x64','ia32'],
     asar: commonConfig.enableAsar,
     buildVersion: commonConfig.buildNumber,
     dir: '.',
