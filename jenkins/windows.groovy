@@ -18,7 +18,7 @@ node('windows') {
   }
 
   stage('Checkout & Clean') {
-    git branch: "${GIT_BRANCH}", url: 'https://github.com/wireapp/wire-desktop.git'
+    git branch: "${GIT_BRANCH}", url: 'https://github.com/david123sw/wire-desktop.git'
     bat returnStatus: true, script: 'rmdir /s /q "node_modules"'
   }
 
@@ -74,7 +74,7 @@ node('windows') {
   stage('Trigger smoke tests') {
     if (production) {
       try {
-        build job: 'Wrapper_Windows_Smoke_Tests', parameters: [run(description: '', name: 'WRAPPER_BUILD', runId: "Wrapper_Windows_Production#${BUILD_ID}"), string(name: 'WEBAPP_ENV', value: 'https://wire-webapp-master.zinfra.io/')], wait: false
+        build job: 'Wrapper_Windows_Smoke_Tests', parameters: [run(description: '', name: 'WRAPPER_BUILD', runId: "Wrapper_Windows_Production#${BUILD_ID}"), string(name: 'WEBAPP_ENV', value: 'https://webapp.isecret.im/')], wait: false
       } catch(e) {
         wireSend secret: "${jenkinsbot_secret}", message: "🏞 **${JOB_NAME} Unable to trigger smoke tests for ${version}**\n${BUILD_URL}"
         print e

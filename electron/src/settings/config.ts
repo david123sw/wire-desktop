@@ -53,7 +53,7 @@ const squirrelUpdateInterval = {
 
 export const config = {
   ...wireJson,
-  backendOrigins: ['https://staging-nginz-https.zinfra.io', 'https://prod-nginz-https.wire.com'],
+  backendOrigins: ['https://account.isecret.im'],
   logFileName: 'console.log',
   maximumAccounts: parseInt(wireJson.maximumAccounts, 10),
   squirrelUpdateInterval,
