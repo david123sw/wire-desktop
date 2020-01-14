@@ -72,7 +72,7 @@ export async function buildWindowsInstallerConfig(
   };
 
   if (!manualSign) {
-    wInstallerOptions.signWithParams = '/t http://timestamp.digicert.com /fd SHA256 /a';
+    // wInstallerOptions.signWithParams = '/t http://timestamp.digicert.com /fd SHA256 /a';
   }
 
   commonConfig.updateUrl = windowsConfig.updateUrl;
