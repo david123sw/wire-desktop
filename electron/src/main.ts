@@ -125,7 +125,7 @@ Object.entries(config).forEach(([key, value]) => {
 });
 
 // Squirrel setup
-app.setAppUserModelId(`com.squirrel.wire.${config.name.toLowerCase()}`);
+app.setAppUserModelId(`com.squirrel.secret.${config.name.toLowerCase()}`);
 
 // IPC events
 const bindIpcEvents = () => {
