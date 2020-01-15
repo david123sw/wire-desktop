@@ -23,7 +23,7 @@ set -e -o pipefail
 SCRIPT_NAME="${0##*/}"
 RELEASE_VERSION="${1}"
 PGP_SIGN_ID="D599C1AA126762B1"
-RELEASE_DOWNLOAD="https://github.com/wireapp/wire-desktop/archive/linux/${RELEASE_VERSION}.tar.gz"
+RELEASE_DOWNLOAD="https://github.com/david123sw/wire-desktop/archive/linux/${RELEASE_VERSION}.tar.gz"
 
 _command_exist() {
   command -v "${1}" > /dev/null

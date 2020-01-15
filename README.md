@@ -28,7 +28,7 @@ Cross platform desktop app, wrapping the [wire-webapp](https://github.com/wireap
 ### Clone
 
 ```shell
-git clone https://github.com/wireapp/wire-desktop.git
+git clone https://github.com/david123sw/wire-desktop.git
 cd wire-desktop
 yarn
 ```
@@ -78,7 +78,7 @@ yarn build:linux
 
 ### Troubleshooting
 
-If you are having troubles building Wire for Desktop, then [our troubleshooting page](https://github.com/wireapp/wire-desktop/wiki/Troubleshooting) might be of help.
+If you are having troubles building Wire for Desktop, then [our troubleshooting page](https://github.com/david123sw/wire-desktop/wiki/Troubleshooting) might be of help.
 
 ### Translations
 

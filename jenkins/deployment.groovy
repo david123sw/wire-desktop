@@ -29,7 +29,7 @@ node('master') {
   }
 
   stage('Checkout & Clean') {
-    git branch: "${GIT_BRANCH}", url: 'https://github.com/wireapp/wire-desktop.git'
+    git branch: "${GIT_BRANCH}", url: 'https://github.com/david123sw/wire-desktop.git'
     sh returnStatus: true, script: 'rm -rf *.pkg *.zip'
   }
 
