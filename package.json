@@ -167,7 +167,7 @@
     "start:dev": "yarn start --env=https://webapp.secret.chat",
     "start:edge": "yarn start --env=https://webapp.secret.chat",
     "start:internal": "yarn start --env=https://webapp.secret.chat",
-    "start:localhost": "yarn start --env=http://localhost:8081",
+    "start:localhost": "yarn start --env=http://localhost:8082",
     "start:prod": "yarn start --env=https://webapp.secret.chat",
     "start:rc": "yarn start --env=https://webapp.secret.chat",
     "test": "yarn lint && yarn prestart && yarn build:ts:tests && yarn test:react && yarn test:main && yarn test:renderer && yarn test:bin && yarn coverage",
