@@ -479,6 +479,14 @@ export const registerGlobalShortcuts = (): void => {
         WindowManager.sendActionToPrimaryWindow(EVENT_TYPE.ACTION.SWITCH_ACCOUNT, index);
       });
     });
+
+    globalShortcut.register('f5', () => {
+      WindowManager.sendActionToPrimaryWindow(EVENT_TYPE.WRAPPER.RELOAD);
+    });
+
+    globalShortcut.register('CommandOrControl+R', () => {
+      WindowManager.sendActionToPrimaryWindow(EVENT_TYPE.WRAPPER.RELOAD);
+    });
   }
 };
 

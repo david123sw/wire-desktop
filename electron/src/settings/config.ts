@@ -45,10 +45,10 @@ const MINUTE_IN_MILLIS = 60 * 1000;
 const HOUR_IN_MILLIS = 60 * MINUTE_IN_MILLIS;
 
 const squirrelUpdateInterval = {
-  /** 5 minutes in milliseconds */
-  DELAY: 5 * MINUTE_IN_MILLIS,
-  /** 24 hours in milliseconds */
-  INTERVAL: 24 * HOUR_IN_MILLIS,
+  /** 1 minutes in milliseconds */
+  DELAY: 1 * MINUTE_IN_MILLIS,
+  /** 0.5 hours in milliseconds */
+  INTERVAL: 0.05 * HOUR_IN_MILLIS,
 };
 
 export const config = {

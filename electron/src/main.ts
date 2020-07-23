@@ -190,7 +190,6 @@ const initWindowStateKeeper = () => {
 // App Windows
 const showMainWindow = async (mainWindowState: WindowStateKeeper.State) => {
   const showMenuBar = settings.restore(SettingsType.SHOW_MENU_BAR, true);
-  logger.log('dav333 showMenuBar', showMenuBar);
 
   const options: BrowserWindowConstructorOptions = {
     autoHideMenuBar: !showMenuBar,
