@@ -174,7 +174,6 @@ const reportWebappVersion = () =>
 
 const checkAvailability = (callback: () => void) => {
   const HALF_SECOND = 500;
-
   const intervalId = setInterval(() => {
     if (window.wire) {
       clearInterval(intervalId);

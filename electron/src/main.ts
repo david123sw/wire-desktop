@@ -72,13 +72,13 @@ const INDEX_HTML = path.join(APP_PATH, 'renderer/index.html');
 const LOG_DIR = path.join(app.getPath('userData'), 'logs');
 const LOG_FILE = path.join(LOG_DIR, 'electron.log');
 const PRELOAD_JS = path.join(APP_PATH, 'dist/renderer/preload-app.js');
-const PRELOAD_RENDERER_JS = path.join(APP_PATH, 'dist/renderer/preload-webview.js');
+// const PRELOAD_RENDERER_JS = path.join(APP_PATH, 'dist/renderer/preload-webview.js');
 const WRAPPER_CSS = path.join(APP_PATH, 'css/wrapper.css');
 const WINDOW_SIZE = {
-  DEFAULT_HEIGHT: 768,
-  DEFAULT_WIDTH: 1024,
-  MIN_HEIGHT: 512,
-  MIN_WIDTH: 760,
+  DEFAULT_HEIGHT: 1080,
+  DEFAULT_WIDTH: 1920,
+  MIN_HEIGHT: 1080,
+  MIN_WIDTH: 1280,
 };
 
 let authenticatedProxyInfo: URL | undefined;
@@ -216,6 +216,7 @@ const showMainWindow = async (mainWindowState: WindowStateKeeper.State) => {
   };
 
   main = new BrowserWindow(options);
+  // main.webContents.session.clearCache();//TODO:DAV
 
   mainWindowState.manage(main);
   attachCertificateVerifyProcManagerTo(main);
@@ -525,7 +526,7 @@ class ElectronWrapperInit {
             params.plugins = 'false';
             webPreferences.allowRunningInsecureContent = false;
             webPreferences.nodeIntegration = false;
-            webPreferences.preload = PRELOAD_RENDERER_JS;
+            // webPreferences.preload = PRELOAD_RENDERER_JS;
             webPreferences.webSecurity = true;
             webPreferences.enableBlinkFeatures = '';
           });
