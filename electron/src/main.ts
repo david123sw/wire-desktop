@@ -74,6 +74,7 @@ const LOG_FILE = path.join(LOG_DIR, 'electron.log');
 const PRELOAD_JS = path.join(APP_PATH, 'dist/renderer/preload-app.js');
 // const PRELOAD_RENDERER_JS = path.join(APP_PATH, 'dist/renderer/preload-webview.js');
 const WRAPPER_CSS = path.join(APP_PATH, 'css/wrapper.css');
+const HAS_REMOVED_CACHE_TXT = path.join(app.getPath('userData'), 'hasRemovedCache.txt');
 const WINDOW_SIZE = {
   DEFAULT_HEIGHT: 1080,
   DEFAULT_WIDTH: 1920,
@@ -216,7 +217,18 @@ const showMainWindow = async (mainWindowState: WindowStateKeeper.State) => {
   };
 
   main = new BrowserWindow(options);
-  // main.webContents.session.clearCache();//TODO:DAV
+  const hasRemovedCache =
+    fs.existsSync(HAS_REMOVED_CACHE_TXT) && fs.readFileSync(HAS_REMOVED_CACHE_TXT, {encoding: 'utf8', flag: 'r'});
+  if (hasRemovedCache) {
+    logger.log('Removed found!');
+  } else {
+    await main.webContents.session.clearCache();
+    fs.writeFile(HAS_REMOVED_CACHE_TXT, JSON.stringify({finished: true}), {encoding: 'utf8', flag: 'w'}, error => {
+      if (!error) {
+        logger.log('Removed successfully!');
+      }
+    });
+  }
 
   mainWindowState.manage(main);
   attachCertificateVerifyProcManagerTo(main);
