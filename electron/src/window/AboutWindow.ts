@@ -45,7 +45,7 @@ const PRELOAD_JS = path.join(APP_PATH, 'dist/renderer/menu/preload-about.js');
 
 const WINDOW_SIZE = {
   HEIGHT: 256,
-  WIDTH: 304,
+  WIDTH: 300,
 };
 
 ipcMain.once(EVENT_TYPE.UI.WEBAPP_VERSION, (event, version: string) => (webappVersion = version));

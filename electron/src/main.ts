@@ -76,10 +76,10 @@ const PRELOAD_JS = path.join(APP_PATH, 'dist/renderer/preload-app.js');
 const WRAPPER_CSS = path.join(APP_PATH, 'css/wrapper.css');
 const HAS_REMOVED_CACHE_TXT = path.join(app.getPath('userData'), 'hasRemovedCache.txt');
 const WINDOW_SIZE = {
-  DEFAULT_HEIGHT: 1080,
-  DEFAULT_WIDTH: 1920,
-  MIN_HEIGHT: 1080,
-  MIN_WIDTH: 1280,
+  DEFAULT_HEIGHT: 768,
+  DEFAULT_WIDTH: 1024,
+  MIN_HEIGHT: 768,
+  MIN_WIDTH: 1024,
 };
 
 let authenticatedProxyInfo: URL | undefined;
