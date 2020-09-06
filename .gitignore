@@ -19,9 +19,9 @@ Wire*.zip
 Secret*.zip
 
 # Configuration imported from https://github.com/wireapp/wire-web-config-wire/
-.env.defaults
+#.env.defaults
 electron/img/
 !electron/img/taskbar.overlay.png
-resources
-!resources/macos/entitlements/child.plist
+#resources
+#!resources/macos/entitlements/child.plist
 electron/locale
