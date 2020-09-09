@@ -21,7 +21,7 @@ import * as dotenv from 'dotenv';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
-import {execAsync} from '../../bin-utils';
+// import {execAsync} from '../../bin-utils';
 import {CommonConfig} from './Config';
 
 interface Result {
@@ -38,10 +38,9 @@ export async function getCommonConfig(envFile: string, wireJson: string): Promis
   const IS_PRODUCTION = process.env.APP_ENV !== 'internal';
 
   const getProjectVersion = async () => {
-    const {stdout: commitId} = await execAsync('git rev-parse --short HEAD', false);
-
+    // const {stdout: commitId} = await execAsync('git rev-parse --short HEAD', false);
     const versionWithoutZero = (defaultConfig.version || '0').replace(/\.0$/, '');
-    const buildNumber = `${process.env.BUILD_NUMBER || `0-${commitId || 'unknown'}`}`;
+    const buildNumber = defaultConfig.buildNumber; //`${process.env.BUILD_NUMBER || `0-${commitId || 'unknown'}`}`;
     const maybeInternal = IS_PRODUCTION ? '' : '-internal';
 
     return `${versionWithoutZero}.${buildNumber}${maybeInternal}`;
