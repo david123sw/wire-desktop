@@ -1,5 +1,5 @@
 {
-  "adminUrl": "https://isecret.im",
+  "adminUrl": "https://secret.chat",
   "appBase": "https://webapp.secret.chat",
   "buildDir": "wrap/build",
   "buildNumber": "0",
@@ -10,15 +10,15 @@
   "electronDirectory": "electron",
   "environment": "production",
   "enableAsar": true,
-  "legalUrl": "https://isecret.im",
-  "licensesUrl": "https://isecret.im",
+  "legalUrl": "https://secret.chat",
+  "licensesUrl": "https://secret.chat",
   "maximumAccounts": "7",
   "name": "Secret",
   "nameShort": "Secret",
-  "privacyUrl": "https://isecret.im",
+  "privacyUrl": "https://secret.chat",
   "raygunApiKey": "J8fJv60jVY19Qxjj8KRYQ",
-  "supportUrl": "https://isecret.im",
+  "supportUrl": "https://secret.chat",
   "version": "1.0.0",
-  "updateUrl": "https://isecret.im",
-  "websiteUrl": "https://isecret.im"
+  "updateUrl": "https://secret.chat",
+  "websiteUrl": "https://secret.chat"
 }
