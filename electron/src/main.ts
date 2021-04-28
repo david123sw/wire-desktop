@@ -578,7 +578,7 @@ class ElectronWrapperInit {
             ) => {
               const responseHeaders = {
                 'Access-Control-Allow-Credentials': 'true',
-                'Access-Control-Allow-Origin': 'http://localhost:8082',
+                'Access-Control-Allow-Origin': 'http://localhost:8888',
               };
 
               callback({
